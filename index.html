@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A gift for you — Luchi</title>
+<meta name="description" content="Someone sent you Luchi, a silly little fox for your Mac that listens, talks back and draws your ideas." />
+<meta property="og:title" content="🎁 Someone sent you Luchi" />
+<meta property="og:description" content="A silly little fox for your Mac that listens, talks back and draws your ideas." />
+<link rel="icon" href="icon-192.png" />
+<style>
+  :root {
+    --bg: #fff6ec;
+    --card: #ffffff;
+    --ink: #3b2618;
+    --muted: #8a6a55;
+    --fox: #f07a22;
+    --fox-soft: #ffb05c;
+    --ring: rgba(240, 122, 34, 0.18);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) {
+      --bg: #1b1512;
+      --card: #2a211c;
+      --ink: #f5ece4;
+      --muted: #c4a98f;
+      --ring: rgba(255, 176, 92, 0.2);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme='dark'] {
+    --bg: #1b1512;
+    --card: #2a211c;
+    --ink: #f5ece4;
+    --muted: #c4a98f;
+    --ring: rgba(255, 176, 92, 0.2);
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at 50% 0%, var(--ring), transparent 60%), var(--bg);
+    color: var(--ink);
+    font: 16px/1.5 ui-rounded, -apple-system, 'SF Pro Rounded', 'Segoe UI', system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px 48px;
+  }
+  main { width: 100%; max-width: 560px; text-align: center; }
+  .fox { width: 220px; max-width: 70vw; margin: 0 auto -8px; display: block; animation: bob 1.6s ease-in-out infinite; }
+  .fox .tail { transform-origin: 124px 170px; animation: wag 1.4s ease-in-out infinite; }
+  .fox .sprout { transform-origin: 84px 44px; animation: boing 1.4s ease-in-out infinite; }
+  .fox .lid { transform-origin: 150px 150px; animation: lid 2.8s ease-in-out infinite; }
+  @keyframes bob { 50% { transform: translateY(-8px); } }
+  @keyframes wag { 50% { transform: rotate(9deg); } }
+  @keyframes boing { 50% { transform: rotate(14deg); } }
+  @keyframes lid { 0%, 70%, 100% { transform: rotate(0); } 80% { transform: rotate(-16deg) translateY(-6px); } }
+  @media (prefers-reduced-motion: reduce) { .fox, .fox * { animation: none !important; } }
+  h1 { font-size: clamp(26px, 6vw, 36px); line-height: 1.15; margin: 12px 0 6px; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  .note {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 18px 20px;
+    margin: 0 auto 24px;
+    box-shadow: 0 8px 30px rgba(59, 38, 24, 0.08);
+    font-size: 18px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+  .note .from { display: block; margin-top: 10px; color: var(--muted); font-size: 14px; }
+  .download {
+    display: inline-block;
+    background: var(--fox);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 19px;
+    padding: 15px 30px;
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(240, 122, 34, 0.35);
+    transition: transform 0.15s;
+  }
+  .download:hover { transform: translateY(-2px) scale(1.02); }
+  .meta { color: var(--muted); font-size: 13px; margin: 10px 0 28px; }
+  .card { background: var(--card); border-radius: 20px; padding: 18px 22px; text-align: left; margin-bottom: 16px; box-shadow: 0 8px 30px rgba(59, 38, 24, 0.06); }
+  .card h2 { font-size: 16px; margin: 0 0 8px; }
+  ol { margin: 0; padding-left: 22px; }
+  li { margin: 6px 0; }
+  b { color: var(--ink); }
+  .muted { color: var(--muted); font-size: 14px; }
+  .warn { border: 2px dashed var(--fox-soft); }
+  footer { color: var(--muted); font-size: 12px; margin-top: 28px; }
+</style>
+</head>
+<body>
+<main>
+  <svg class="fox" viewBox="0 0 200 210" role="img" aria-label="Luchi the fox holding a present">
+    <defs>
+      <radialGradient id="fur" cx="45%" cy="30%" r="75%"><stop offset="0%" stop-color="#ffb05c"/><stop offset="100%" stop-color="#f47b20"/></radialGradient>
+      <radialGradient id="cream" cx="50%" cy="30%" r="70%"><stop offset="0%" stop-color="#fff"/><stop offset="100%" stop-color="#ffeede"/></radialGradient>
+    </defs>
+    <g class="tail">
+      <path d="M122 170 C 168 178, 204 150, 196 108 C 192 84, 172 70, 160 84 C 150 96, 166 108, 164 124 C 162 142, 140 150, 122 170 Z" fill="url(#fur)"/>
+      <path d="M196 108 C 192 84, 172 70, 160 84 C 168 84, 184 92, 196 108 Z" fill="url(#cream)"/>
+    </g>
+    <ellipse cx="100" cy="164" rx="38" ry="30" fill="url(#fur)"/>
+    <ellipse cx="100" cy="170" rx="22" ry="20" fill="url(#cream)"/>
+    <ellipse cx="82" cy="192" rx="12" ry="7.5" fill="#6b3d25"/><ellipse cx="118" cy="192" rx="12" ry="7.5" fill="#6b3d25"/>
+    <!-- present -->
+    <rect x="72" y="150" width="56" height="42" rx="6" fill="#e2445c"/>
+    <rect x="96" y="150" width="8" height="42" fill="#ffd166"/>
+    <g class="lid"><rect x="68" y="140" width="64" height="14" rx="5" fill="#f25f73"/><rect x="96" y="140" width="8" height="14" fill="#ffd166"/>
+      <path d="M100 140 C 88 126, 78 134, 92 140 Z M100 140 C 112 126, 122 134, 108 140 Z" fill="#ffd166"/></g>
+    <ellipse cx="72" cy="160" rx="9" ry="8" fill="#6b3d25"/><ellipse cx="128" cy="160" rx="9" ry="8" fill="#6b3d25"/>
+    <!-- head -->
+    <g transform="rotate(-6 100 120)">
+      <path d="M46 70 C 40 40, 50 18, 62 12 C 74 22, 86 42, 88 58 Z" fill="url(#fur)" transform="rotate(-60 66 64)"/>
+      <path d="M154 70 C 160 40, 150 18, 138 12 C 126 22, 114 42, 112 58 Z" fill="url(#fur)"/>
+      <path d="M144 58 C 146 40, 142 28, 136 24 C 128 32, 122 44, 120 56 Z" fill="#6b3d25"/>
+      <ellipse cx="100" cy="92" rx="62" ry="50" fill="url(#fur)"/>
+      <g class="sprout"><path d="M84 44 C 84 34, 82 26, 80 20" stroke="#4d9a3a" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M80 22 C 70 20, 64 12, 66 6 C 74 6, 80 12, 80 22 Z" fill="#7cc653"/><path d="M80 22 C 88 18, 94 10, 92 4 C 84 4, 80 12, 80 22 Z" fill="#8fd563"/></g>
+      <path d="M40 100 Q 50 96 58 104 Q 72 100 100 124 Q 128 100 142 104 Q 150 96 160 100 Q 156 130 128 138 Q 100 146 72 138 Q 44 130 40 100 Z" fill="url(#cream)"/>
+      <circle cx="75" cy="90" r="15" fill="#fff" stroke="#2b1a12" stroke-width="2.6"/><circle cx="126" cy="88" r="18" fill="#fff" stroke="#2b1a12" stroke-width="2.6"/>
+      <circle cx="79" cy="93" r="6.5" fill="#2b1a12"/><circle cx="121" cy="92" r="7.5" fill="#2b1a12"/>
+      <circle cx="77" cy="90" r="2" fill="#fff"/><circle cx="119" cy="89" r="2.4" fill="#fff"/>
+      <ellipse cx="100" cy="111" rx="8" ry="6.5" fill="#2b1a12"/>
+      <path d="M88 120 Q 94 127 100 120 Q 106 127 112 120" stroke="#2b1a12" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <path d="M103 122 Q 104 131 108 131 Q 112 130 110 121 Z" fill="#ff7b93" stroke="#2b1a12" stroke-width="1.5"/>
+      <ellipse cx="58" cy="112" rx="11" ry="7" fill="#ff8fa3" opacity="0.6"/><ellipse cx="142" cy="112" rx="11" ry="7" fill="#ff8fa3" opacity="0.6"/>
+    </g>
+  </svg>
+
+  <h1 id="title">You've got a little fox 🎁</h1>
+  <p class="sub" id="sub">Luchi is a silly companion that sits on your Mac, listens when you talk, talks back, and draws your ideas and feelings.</p>
+  <div class="note" id="note" hidden></div>
+
+  <a class="download" id="download" href="https://github.com/wenxu0907-eng/luchi-releases/releases/latest/download/Luchi-mac-arm64.dmg">Download Luchi for Mac</a>
+  <div class="meta" id="meta">Free · for Macs with Apple chips (M1 or newer) · about 550 MB</div>
+
+  <div class="card warn" id="notmac" hidden>
+    <h2>Open this on your Mac 💻</h2>
+    <p class="muted">Luchi is a Mac app for now. Open this page on your Mac to download it.</p>
+  </div>
+
+  <div class="card">
+    <h2>Setting up (about 2 minutes)</h2>
+    <ol>
+      <li>Open the downloaded file and drag <b>Luchi</b> into <b>Applications</b>.</li>
+      <li>Open Luchi. If your Mac says it “can't be opened”, go to <b>System Settings → Privacy &amp; Security</b>, scroll down and click <b>Open Anyway</b> (only needed once).</li>
+      <li>Luchi asks which brain to use. Pick <b>ChatGPT</b> and sign in, or <b>Claude</b> if you have Claude Code.</li>
+      <li>Click <b>Allow</b> for the microphone, press <b>⌥ Space</b> (Option + Space) and say hi!</li>
+    </ol>
+  </div>
+  <div class="card">
+    <h2>Good to know</h2>
+    <p class="muted">Everything Luchi remembers stays on your Mac. It uses your own ChatGPT or Claude plan. When a new version comes out, the fox will tell you.</p>
+  </div>
+  <footer><span id="version"></span></footer>
+</main>
+<script>
+  // The gift note travels in the link's #fragment, so it's never sent to any server.
+  const p = new URLSearchParams(location.hash.slice(1))
+  const to = p.get('to'), from = p.get('from'), note = p.get('note')
+  const title = document.getElementById('title')
+  if (to) title.textContent = `${to}, you've got a little fox 🎁`
+  if (from) document.getElementById('sub').textContent = `${from} sent you Luchi, a silly companion that sits on your Mac, listens when you talk, talks back, and draws your ideas and feelings.`
+  if (note || from) {
+    const el = document.getElementById('note')
+    el.hidden = false
+    if (note) el.append(document.createTextNode(note))
+    if (from) { const s = document.createElement('span'); s.className = 'from'; s.textContent = `— ${from}`; el.append(s) }
+  }
+  if (from) document.title = `A gift from ${from} — Luchi`
+  const isMac = /Macintosh|Mac OS X/.test(navigator.userAgent) && !('ontouchend' in document)
+  if (!isMac) document.getElementById('notmac').hidden = false
+  fetch('https://api.github.com/repos/wenxu0907-eng/luchi-releases/releases/latest')
+    .then((r) => (r.ok ? r.json() : null))
+    .then((r) => { if (r && r.tag_name) document.getElementById('version').textContent = `Luchi ${r.tag_name.replace(/^v/, '')}` })
+    .catch(() => {})
+</script>
+</body>
+</html>
