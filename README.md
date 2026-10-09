@@ -1,11 +1,10 @@
-# 🦊 Luchi
+# Luchi Family
 
-A silly little fox for your Mac that listens when you talk, talks back, and turns your ideas, feelings and questions into drawings.
+Installers for Luchi Family, the family helper from [luchistudio.com](https://luchistudio.com): a fox named Luchi who talks with each person in the family, plans the day with the kids, helps with homework without giving answers away, and builds small games and pages.
 
-**Got a gift link?** Open it on your Mac: https://wenxu0907-eng.github.io/luchi-releases/
+This repository only hosts the installers. Luchi's code is not here.
 
-This repository only hosts Luchi's installers and its gift page:
-- `Luchi-mac-arm64.dmg`: Luchi for Mac (Apple chips). Uses your own ChatGPT or Claude sign-in.
-- `Luchi-Windows-Setup.exe` / `Luchi-Client-mac-arm64.dmg`: the desktop fox for family computers, connected to a home-base Mac.
+- **Mac** (Apple chips, macOS 12 or newer): [Luchi-Family-mac.dmg](https://github.com/wenxu0907-eng/luchi-releases/releases/latest/download/Luchi-Family-mac.dmg), signed with Developer ID and notarized by Apple.
+- **iPhone and iPad**: coming to the App Store.
 
-Downloads are on the [Releases](../../releases/latest) page.
+Every version is on the [Releases](../../releases) page. Sign in with your Luchi Family account; families are joining a few at a time, and you can get on the list at [luchistudio.com](https://luchistudio.com).
